@@ -40,6 +40,7 @@ function fetchValue(search) {
 
 function showData(data) {
 
+
     searchResult.innerHTML = `
 
             ${data.data.map(song => `
@@ -69,7 +70,7 @@ searchResult.addEventListener('click', btn => {
     }
 })
 
-// Get lyrics for song
+// Get lyrics for song title
 async function getLyrics(artist, songTitle) {
     const res = await fetch(`https://api.lyrics.ovh/v1/${artist}/${songTitle}`);
     const data = await res.json();
